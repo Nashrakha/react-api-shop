@@ -99,7 +99,7 @@ function TaskList() {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8000/shop/${id}`);
+            await api.delete(`/shop/${id}`);
             setDeleteMessage('Shop deleted successfully');
             fetchShops();
         } catch (err) {
@@ -168,7 +168,7 @@ function TaskList() {
                     <h1 className="text-orange-400 text-3xl font-sans capitalize px-2 mb-4">All shops will display here</h1>
 
                     <div className="h-[400px] overflow-y-auto border border-gray-300 rounded-lg">
-                        <div className='flex justify-between items-center px-3'>
+                        <div className='flex justify-between items-center px-3 fixed top-0'>
                             <select name="" id="" className='border-double border-slate-500 rounded-lg'>
                                 <option value="">Name</option>
                                 <option value="">-Name</option>
